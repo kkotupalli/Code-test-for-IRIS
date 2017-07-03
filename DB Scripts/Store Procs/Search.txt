@@ -1,0 +1,32 @@
+use [IRIS]
+go
+create procedure getEmployeeDetails(
+@employeename varchar(30),
+@designation varchar(5),
+@age int,
+@contact varchar(15)
+)
+as
+begin
+if(@employeename is null)
+begin
+set @employeename = ''
+end
+if(@designation is null)
+begin
+set @designation = ''
+end
+if(@age is null)
+begin
+set @age = ''
+end
+if(@contact is null)
+begin
+set @contact = ''
+end
+
+select * from [IRIS].dbo.EmployeeDetails where  (name like '%' +ISNULL(@employeename ,name)+ '%' ) and 
+(designation like '%' +ISNULL(@designation ,designation)+ '%' ) and (age like '%' +ISNULL(@age ,age)+ '%' ) and
+(phone like '%' +ISNULL(@contact ,phone)+ '%' )
+end
+go

@@ -1,0 +1,25 @@
+use [IRIS]
+
+go
+
+
+insert into EmployeeDetails values(
+'ID1', 'kartheek', 29, 'SSE', '9666046283', 1, 1, 1, 1,1, 1, 1, 1, 1,1 ,1 , 1 , 1, 1
+)
+go
+insert into EmployeeDetails values(
+'ID2', 'diany', 29, 'SE', '9666046283', 1, 1, 1, 1,1, 1, 1, 1, 1,1 ,1 , 1 , 1, 1
+)
+go
+insert into EmployeeDetails values(
+'ID3', 'srinivas', 29, 'SE', '9666046283', 1, 1, 1, 1,1, 1, 1, 1, 1,1 ,1 , 1 , 1, 1
+)
+go
+insert into EmployeeDetails values(
+'ID4', 'prasad', 29, 'SE', '9666046283', 1, 1, 1, 1,1, 1, 1, 1, 1,1 ,1 , 1 , 1, 1
+)
+go
+insert into EmployeeDetails values(
+'ID5', 'dinesh', 29, 'SE', '9666046283', 1, 1, 1, 1,1, 1, 1, 1, 1,1 ,1 , 1 , 1, 1
+)
+go

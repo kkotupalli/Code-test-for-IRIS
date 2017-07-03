@@ -1,0 +1,24 @@
+use [IRIS]
+
+create table EmployeeDetails
+(
+employeeID varchar(10),
+name varchar(30),
+age int,
+designation varchar(5),
+phone varchar(11),
+canAddClient bit,
+canModifyClient bit,
+canDeleteClient bit,
+canCreateQuotation bit,
+canViewQuotation bit,
+canReviewQuotation bit,
+canGeneratePerformaInvoice bit,
+canGenerateInvoice bit,
+canGenerateGRV bit,
+canViewSalesReport bit,
+canViewClientsReport bit,
+canViewTurnoverReport bit,
+canViewQuotationReport bit,
+canAuditQuotationReport bit,
+)

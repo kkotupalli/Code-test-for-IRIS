@@ -1,0 +1,44 @@
+use [IRIS]
+go
+create procedure UpdateUserData
+(
+@EmployeeID varchar(30),
+@employeename varchar(30),
+@designation varchar(5),
+@age int,
+@contact varchar(15),
+@canAddClient bit,
+            @canModifyClient bit,
+            @canDeleteClient bit,
+            @canCreateQuotation bit,
+            @canViewQuotation bit,
+            @canReviewQuotation bit,
+            @canGeneratePerformaInvoice bit,
+            @canGenerateInvoice bit,
+            @canGenerateGRV bit,
+            @canViewSalesReport bit,
+            @canViewClientsReport bit,
+            @canViewTurnoverReport bit,
+            @canViewQuotationReport bit,
+            @canAuditQuotationReport bit,
+            @RetVal int
+
+)
+as
+begin
+
+update [IRIS].dbo.EmployeeDetails 
+set name = @employeename, age = @age, designation = @designation, phone = @contact, 
+canAddClient = @canAddClient, canModifyClient=@canModifyClient,canDeleteClient =@canDeleteClient,
+canCreateQuotation=@canCreateQuotation, canViewQuotation=@canViewQuotation, canReviewQuotation =@canReviewQuotation,
+canGeneratePerformaInvoice=@canGeneratePerformaInvoice, canGenerateInvoice=@canGenerateInvoice, canGenerateGRV=@canGenerateGRV,
+canViewSalesReport=@canViewSalesReport, canViewClientsReport=@canViewClientsReport, canViewTurnoverReport=@canViewTurnoverReport,
+canViewQuotationReport=@canViewQuotationReport , canAuditQuotationReport=@canAuditQuotationReport
+where
+employeeID = @EmployeeID
+
+set @RetVal = 1
+
+return  @RetVal
+end
+go

@@ -1,0 +1,10 @@
+use [IRIS]
+go
+create procedure GetCustomerDetails(
+@EmployeeID varchar(30)
+)
+as
+begin
+select * from [IRIS].dbo.EmployeeDetails where employeeID = @EmployeeID
+end
+go
